@@ -1,0 +1,26 @@
+owner: k0kesh
+repo: web-cited-status
+
+sites:
+  - name: Marketing site
+    url: https://web-cited.com
+  - name: Marketing site (www)
+    url: https://www.web-cited.com
+  - name: Audit pipeline
+    url: https://audit.web-cited.com/health
+  - name: Customer artifact CDN
+    url: https://artifacts.web-cited.com
+
+status-website:
+  cname: status.web-cited.com
+  name: Web Cited Status
+  introTitle: "Web Cited service status"
+  introMessage: "Real-time uptime and response-time monitoring for Web Cited customer-facing services. Updated every 5 minutes by GitHub Actions. For incidents, see the GitHub Issues tab."
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/k0kesh/web-cited-status
+
+assignees:
+  - k0kesh
