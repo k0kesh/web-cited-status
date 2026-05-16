@@ -13,6 +13,21 @@ sites:
     expectedStatusCodes:
       - 200
       - 404
+  - name: Intake API
+    url: https://api.web-cited.com/health
+  - name: Citation Monitor signup
+    url: https://web-cited.com/citation-monitor
+  - name: Citation Monitor manage
+    url: https://web-cited.com/citation-monitor/manage
+  - name: Citation Monitor portal route
+    # POST endpoint - expect 401 for an invalid token (route exists + auth ran)
+    url: https://api.web-cited.com/api/citation-monitor/portal
+    method: POST
+    body: '{"token":"upptime-probe"}'
+    headers:
+      - "Content-Type: application/json"
+    expectedStatusCodes:
+      - 401
 
 status-website:
   cname: status.web-cited.com
