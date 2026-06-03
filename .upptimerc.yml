@@ -28,6 +28,17 @@ sites:
       - "Content-Type: application/json"
     expectedStatusCodes:
       - 401
+  - name: AI crawler access (GEO canary)
+    # GEO tripwire: answer-engine SEARCH crawlers must keep getting 200, or AI
+    # citation silently dies. If Cloudflare Super Bot Fight Mode ("Block AI bots")
+    # is ever enabled on this zone, the OAI-SearchBot user-agent gets 403 and this
+    # check trips. Origin: the rdbinder.com SBFM incident 2026-06-01, a sibling zone
+    # on the same Cloudflare account, where SBFM silently 403'd every AI crawler.
+    url: https://web-cited.com/learn/
+    headers:
+      - "User-Agent: Mozilla/5.0 (compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot)"
+    expectedStatusCodes:
+      - 200
 
 status-website:
   cname: status.web-cited.com
