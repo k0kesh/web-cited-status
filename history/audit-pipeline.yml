@@ -1,7 +1,7 @@
 url: https://audit.web-cited.com/audit/healthz
-status: up
-code: 200
-responseTime: 377
-lastUpdated: 2026-08-17T23:03:37.551Z
+status: down
+code: 502
+responseTime: 5028
+lastUpdated: 2026-08-18T05:11:20.395Z
 startTime: 2026-04-27T20:29:17.666Z
 generator: Upptime <https://github.com/upptime/upptime>
